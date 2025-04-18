@@ -1,5 +1,136 @@
-<html>
-<body>
-<h1>Wenn ihr dachtet, ihr könntet die website stehlen, dann habt ihr euch geschnitten</h1>
-</body>
-</html>
+<!DOCTYPE html>
+ <html lang="de">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Palumo MC – Deine Welt, dein Sound</title>
+   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Open+Sans&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/png" href="/mnt/data/6f0b9dc0-d8f5-4305-806d-ffaa42df5f9c.png">
+   <style>
+     * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+     }
+     body {
+       font-family: 'Open Sans', sans-serif;
+       background: linear-gradient(to bottom, #0f5132, #2c3e50);
+       color: #ecf0f1;
+       line-height: 1.6;
+     }
+     header {
+       background: #0b3d2e;
+       padding: 2rem;
+       text-align: center;
+       position: relative;
+     }
+     header img {
+       width: 64px;
+       height: 64px;
+       animation: pulse 2s infinite;
+     }
+     @keyframes pulse {
+       0% { transform: scale(1); }
+       50% { transform: scale(1.1); }
+       100% { transform: scale(1); }
+     }
+     h1 {
+       font-family: 'Press Start 2P', cursive;
+       font-size: 1.8rem;
+       margin: 1rem 0;
+       color: #6effb3;
+     }
+     .cta-button {
+       background: #1abc9c;
+       color: white;
+       padding: 1rem 2rem;
+       border: none;
+       font-size: 1rem;
+       cursor: pointer;
+       border-radius: 10px;
+       margin-top: 1rem;
+       transition: background 0.3s;
+     }
+     .cta-button:hover {
+       background: #16a085;
+     }
+     section {
+       padding: 4rem 2rem;
+       text-align: center;
+     }
+     .features {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       gap: 2rem;
+       margin-top: 2rem;
+     }
+     .feature-box {
+       background: #1e4d43;
+       padding: 2rem;
+       border-radius: 20px;
+       width: 280px;
+       box-shadow: 0 0 15px rgba(0,0,0,0.4);
+     }
+     .feature-box h3 {
+       color: #6effb3;
+     }
+     footer {
+       background: #102c2c;
+       text-align: center;
+       padding: 2rem;
+       font-size: 0.9rem;
+     }
+     footer a {
+       color: #88e0c1;
+     }
+   </style>
+ </head>
+ <body>
+   <header>
+     <img src="/mnt/data/6f0b9dc0-d8f5-4305-806d-ffaa42df5f9c.png" alt="Palumo MC Logo">
+     <h1>Palumo MC</h1>
+     <p>Deine Welt, dein Sound</p>
+     <button class="cta-button" onclick="alert('IP kopiert: play.palumo.de')">Jetzt beitreten</button>
+   </header>
+ 
+   <section>
+     <h2>Was macht uns besonders?</h2>
+     <div class="features">
+       <div class="feature-box">
+         <h3>🎮 Kein Pay2Win</h3>
+         <p>Alle Spieler sind gleich – ohne Echtgeldvorteile.</p>
+       </div>
+       <div class="feature-box">
+         <h3>📅 Events</h3>
+         <p>Regelmäßige Challenges, Minigames und PvP-Turniere.</p>
+       </div>
+       <div class="feature-box">
+         <h3>🔊 Voice Chat</h3>
+         <p>Integrierter Sprachchat für echtes Teamgefühl.</p>
+       </div>
+     </div>
+   </section>
+ 
+   <section>
+     <h2>Server-Infos</h2>
+     <p><strong>IP-Adresse:</strong> play.palumo.de</p>
+     <p><strong>Version:</strong> 1.20+</p>
+     <p><strong>Status:</strong> <span id="status">Lade...</span></p>
+   </section>
+ 
+   <footer>
+     <p>&copy; 2025 Palumo MC. Alle Rechte vorbehalten.</p>
+     <p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+   </footer>
+ 
+   <script>
+     // Beispiel für Serverstatus-Simulation
+     window.addEventListener('load', () => {
+       setTimeout(() => {
+         document.getElementById('status').textContent = '🟢 Online (12 Spieler)';
+       }, 1000);
+     });
+   </script>
+ </body>
+ </html>
